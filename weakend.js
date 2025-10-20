@@ -170,8 +170,8 @@ for(let i=0; i<=10; i++){
 }
 
 ////\\\\\\/////\\\\\\\
-let number = prompt("enter your choice number for mutiplication:");
-let tran = parseInt(number);
+let nomber = prompt("enter your choice number for mutiplication:");
+let tran = parseInt(nomber);
 for(let i=1; i<=10; i++){
     console.log(`${tran}X${i} = ${tran*i}`);
 }
@@ -262,4 +262,29 @@ let btn= document.getElementsByClassName("btn3")[0];
 
 btn.addEventListener("click", function(){
     p.innerHTML = inp.value;
-})
+});
+// Create a counter app:
+
+// Two buttons: “+” and “–”
+
+// When “+” clicked → number increases
+
+// When “–” clicked → number decreases
+
+// Use event listeners, conditions, and DOM updates.
+
+let plus = document.getElementsByClassName("plus")[0];
+let minus = document.getElementsByClassName("minus")[0];
+let take = document.getElementsByClassName("collect")[0];
+
+let number = 0;
+take.value = number;
+
+plus.addEventListener("click", function(){
+  number++;
+  take.value =number;
+});
+minus.addEventListener("click", function(){
+    number--;
+    take.value = number;
+});
