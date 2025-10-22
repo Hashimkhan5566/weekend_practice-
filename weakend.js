@@ -276,6 +276,15 @@ btn.addEventListener("click", function(){
 let plus = document.getElementsByClassName("plus")[0];
 let minus = document.getElementsByClassName("minus")[0];
 let take = document.getElementsByClassName("collect")[0];
+let one = document.getElementsByClassName("one")[0];
+let two = document.getElementsByClassName("two")[0];
+
+
+let digit_1  = 1;
+take.value = digit_1;
+
+let digit_2 = 2;
+take.value = digit_2;
 
 let number = 0;
 take.value = number;
@@ -287,4 +296,56 @@ plus.addEventListener("click", function(){
 minus.addEventListener("click", function(){
     number--;
     take.value = number;
+});
+one.addEventListener("click" , function(){
+    take.value = digit_1;
+});
+
+two.addEventListener("click",function(){
+    take.value = digit_2; 
+});
+
+// 🧩 Part 6: Combined Challenge (Mini Project)
+
+// Create a small To-Do List:
+
+// One input box + “Add Task” button
+
+// When you type a task and click Add → the task appears in a list below
+
+// Each task has a “Delete” button to remove it
+
+// Use:
+
+// createElement()
+
+// appendChild()
+
+// removeChild()
+
+// addEventListener()
+
+// Loops for task numbering
+
+let take_task =  document.getElementsByClassName("take_task")[0];
+
+let button = document.getElementsByClassName("task")[0];
+
+let button_2 = document.getElementsByClassName("Delete_task")[0];
+let list = document.getElementsByClassName("list")[0];
+
+let english = "";
+
+list.innerHTML += `<li>${take_task.value}</li>`;
+
+
+button.addEventListener("click", function(){
+    list.innerHTML += `<li>${take_task.value}</li>`;
+    take_task.value = " ";
+
+});
+button_2.addEventListener("click", function(){
+    if(list.lastChild){
+        list.removeChild(list.lastChild);
+    }
 });
