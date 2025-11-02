@@ -349,3 +349,157 @@ button_2.addEventListener("click", function(){
         list.removeChild(list.lastChild);
     }
 });
+
+//1. Basics & Variables (Videos #1–#4)
+// 🧪 Easy:
+
+// 👉 Print your name and age using console.log() and combine them using string concatenation and template literals.
+
+let name = "hashim khan";
+
+let age = 34;
+
+console.log(name);
+console.log(age);
+console.log(`my name is ${name} and my age is ${age} `);
+console.log("my name is"+ name + "and my age is "+ age);
+
+// ⚙️ Intermediate:
+
+// 👉 Create a variable radius, calculate the area of a circle, and print the result using both let and const. Explain which should be used and why.
+let radius = 23;
+const pi = 3.14;
+console.log(pi*radius*radius);
+
+//let radius2 =  34;
+//const pii = Math.pi(radius2);
+//console.log(pii*radius2*radius2);
+
+// 🚀 Complex:
+
+// 👉 Create a small script that asks a user (via prompt) their age and checks if they are eligible to vote (18+). Print a message using both if and ternary operator.
+let omaar = prompt("enter your age:");
+let omarr = Number(omaar);
+if(omarr>18){
+    console.log("your age ");
+
+}
+else{
+    console.log("you are not eligible.");
+}
+console.log(omarr>18 ? "elgible": "not eligible");
+
+//🧩 2. Operators & Conditionals (Videos #6–#8)
+// 🧪 Easy:
+     
+// 👉 Write a program that checks whether a number is even or odd.
+      let digit = 145;
+      if(digit%2==0){
+        console.log("this is even.");
+      } 
+     else{
+        console.log("this is odd.");
+     }
+// ⚙️ Intermediate:
+
+// 👉 Use logical operators to check whether a number is divisible by both 3 and 5.
+       let digit2 = 234;
+       if(digit2%3==0 && digit%5==0){
+        console.log("this is even", "this is odd.");
+       }
+
+       else{
+        console.log("this is odd and", "this is even");
+       }
+// 🚀 Complex:
+
+// 👉 Create a grading system:
+
+// Input marks → print Grade (A, B, C, D, F) using if-else and then rewrite using switch.
+//////////////////////////
+
+
+// 🧪 Easy:
+
+// 👉 Print numbers from 1 to 10 using a for loop.
+     for(i=0; i<=10; i++){
+        console.log(i);
+    }
+
+// ⚙️ Intermediate:
+
+// 👉 Write a function that takes a number and returns its factorial using a while loop.
+
+    let namber = 5;
+    let fact = 1;
+    while(namber>0){
+        fact=fact*namber;
+        namber--;
+    }
+    console.log(fact);
+
+// 🚀 Complex:
+
+// 👉 Write a function isPrime(num) and return true or false. Use it to print all prime numbers between 1–50.
+
+let ndmber = 456;
+let isPrime = true;
+
+if(number<=1){
+    isPrime = false;
+}
+else{
+    for(let i=2; i<number; i++){
+        if(number%1){
+            isPrime = false;
+            break;
+        }
+    }
+}
+if(isPrime){
+    console.log("this is prime.");
+}
+else{
+    console.log("this is not Prime");
+}
+
+// 🧪 Easy:
+
+// 👉 Find the length of a string and convert it to uppercase.
+let en_str  =  "this is javascript powerfull programming language";
+
+console.log(en_str.length);
+console.log(en_str.toUpperCase());
+
+
+// ⚙️ Intermediate:
+
+// 👉 Write a function that counts vowels in a string.
+let eng_str = "this is powerful language";
+
+let counts = "";
+
+for(let stri of eng_str){
+    if("aeiou".includes(stri.toLowerCase())){
+        console.log("this is vowel");
+    }
+    else
+    {
+        console.log("this is not vowels")
+    }
+    counts++;
+}
+
+
+// 🚀 Complex:
+
+// 👉 Reverse a string manually (without .reverse()).
+
+
+let reverse = "this is javscript";
+let reverse_stri = "";
+for(let i=reverse.length-1; i>=0; i--){
+    console.log("this is  reverse",reverse_stri);
+    reverse_stri+=reverse[i];
+}
+console.log("this is reverse", reverse_stri);
